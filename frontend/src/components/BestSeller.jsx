@@ -15,7 +15,7 @@ function BestSeller() {
     setBestSeller(filterProducts.slice(0, 4));
   }, [products]);
 
-  console.log("bestseller", bestseller);
+  
 
   return (
    <div>
