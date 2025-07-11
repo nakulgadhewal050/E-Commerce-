@@ -6,7 +6,7 @@ export const AuthDataContext = createContext()
 
 function AuthContext({children}) {
 
-    let serverUrl = "https://e-commerce-backend-pqff.onrender.com"
+    let serverUrl = "http://localhost:4000"
 
     let value = {
          serverUrl
