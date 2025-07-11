@@ -109,7 +109,7 @@ function login() {
             {!show && <IoEyeOffOutline className='w-[20px] h-[20px] cursor-pointer absolute right-[5%] bottom-[56%]' onClick={() => setShow(prev => !prev)} />}
 
             <button className='w-[100%] h-[50px] bg-[#6060f5] rounded-lg flex items-center justify-center mt-[20px] text-[17px] font-semibold 
-                 cursor-pointer'> {loading ? <Loading/> : "Create Account"}</button>
+                 cursor-pointer'> {loading ? <Loading/> : "Login"}</button>
 
             <p className='flex gap-[10px]'>You have no account
               <a className='text-[#5555f6] text-[17px] font-semibold cursor-pointer hover:underline' href="/signup">Create New Account</a>
