@@ -59,7 +59,7 @@ function login() {
         name, email
       }, { withCredentials: true });
       
-      getCurrentUser();
+      await getCurrentUser();
       navigate('/');
       toast.success("Login successful!");
 
