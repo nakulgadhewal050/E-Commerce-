@@ -3,7 +3,7 @@ import Title from '../components/Title'
 import { useState } from 'react'
 import { useContext } from 'react';
 import { shopDataContext } from '../context/ShopContext';
-import { AuthDataContext } from '../context/authContext';
+import { AuthDataContext } from '../context/AuthContext';
 import axios from 'axios';
 
 function Order() {
