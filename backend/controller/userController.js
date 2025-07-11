@@ -3,13 +3,36 @@ import User from '../model/userModel.js';
 
 export const getCurrentUser = async (req, res) => {
     try {
-        let user = await User.findById(req.userId);
-        if(!user){
-            return res.status(404).json({ message: "User not found" });
+        // Check if userId exists (from auth middleware)
+        if (!req.userId) {
+            return res.status(401).json({ 
+                success: false,
+                message: "Authentication required" 
+            });
         }
-        return res.status(200).json(user);
+
+        let user = await User.findById(req.userId).select('-password');
+        
+        if (!user) {
+            return res.status(404).json({ 
+                success: false,
+                message: "User not found" 
+            });
+        }
+
+        return res.status(200).json({
+            success: true,
+            user: user,
+            message: "User data fetched successfully"
+        });
+        
     } catch (error) {
-        return res.status(500).json({ message: "current user error", error: error.message });
+        console.log("Error in getCurrentUser:", error);
+        return res.status(500).json({ 
+            success: false,
+            message: "Server error while fetching user data", 
+            error: error.message 
+        });
     }
 }
  
