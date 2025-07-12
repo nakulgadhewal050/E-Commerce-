@@ -1,4 +1,3 @@
-;
 import {useContext, createContext, useState} from 'react'
 import { AuthDataContext } from './AuthContext';
 import axios from 'axios';
