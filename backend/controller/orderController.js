@@ -2,7 +2,6 @@ import Order from "../model/orderModel.js";
 import User from "../model/userModel.js";
 import razorpay from "razorpay";
 import dotenv from "dotenv";
-import e from "express";
 dotenv.config();
 
 
